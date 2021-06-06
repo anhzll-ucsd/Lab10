@@ -2,6 +2,39 @@
 
 import { router } from './router.js';
 
+
+(function() {
+  var factory = splitio({
+    core: {
+      authorizationKey: 'ed783b30-c6fc-11eb-bcaf-0e264c9979ad',
+      key: Math.random().toString(36).substring(2,10)
+    }
+  });
+  var client = factory.client();
+  
+  client.on(client.Event.SDK_READY, function() {
+  
+    var treatment = client.getTreatment('font_change');
+  
+    if (treatment === 'on') {
+      // Insert code for on treatment
+      document.getElementsByTagName("body")[0].classList.add('different-font');
+      document.getElementsByTagName("main")[0].classList.add('different-font');
+    } else if (treatment === 'off') {
+      // Insert code for off treatment
+      document.getElementsByTagName("body")[0].classList.remove('different-font');
+      document.getElementsByTagName("main")[0].classList.add('different-font');
+    } else {
+      // Insert code for control treatment
+    }
+  
+    client.destroy().then(function() {
+      // Your data is successfully flushed.
+    });
+  });
+  })();
+
+
 const headerText = document.querySelector('header > h1');
 const settings = document.querySelector('header > img');
 
