@@ -10,4 +10,6 @@ https://anhzll-ucsd.github.io/Lab10/secondSplit.html
 
 The difference between the pages is some console logging made
 
-![](couldn't.png)
+![](Couldn't.png)
+
+![](Added the tags.png)
