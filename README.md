@@ -12,4 +12,4 @@ The difference between the pages is some console logging made
 
 ![](Couldn't.png)
 
-![](Added the tags.png)
+![](Added the tags.jpg)
