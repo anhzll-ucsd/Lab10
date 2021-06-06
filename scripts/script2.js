@@ -17,9 +17,11 @@ var factory = splitio({
     var treatment = client.getTreatment('A');
   
     if (treatment === 'on') {
-      document.getElementsByTagName("main")[0].classList.add('double-column');
+      document.getElementsByTagName("main")[0].classList.add('triple-column');
+      console.log("something");
     }   else   if (treatment === 'off') {
       document.getElementsByTagName("main")[0].classList.remove('double-column');
+      console.log("console same same but not quite");
     }   else {
         // insert control code here
     }
